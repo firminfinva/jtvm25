@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/sections/Hero";
+import News from "@/components/sections/News";
 import VideoSection from "@/components/sections/VideoSection";
 import Thematics from "@/components/sections/Thematics";
 import About from "@/components/sections/About";
@@ -20,6 +21,7 @@ export default function Home() {
     const handleScroll = () => {
       const sections = [
         "accueil",
+        "actualites",
         "apropos",
         "video",
         "thematiques",
@@ -77,6 +79,10 @@ export default function Home() {
       <main>
         <div id="accueil-section" className="pt-16">
           <Hero onVideoClick={handleVideoClick} />
+        </div>
+
+        <div id="actualites-section" className="pt-16">
+          <News />
         </div>
 
         <div id="apropos-section" className="pt-16">

@@ -45,13 +45,13 @@ const Navigation = ({ activeSection, onSectionChange }: NavigationProps) => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <a 
+            <Link 
               href="/" 
               onClick={handleLogoClick}
               className="cursor-pointer"
             >
               <Logo size="md" />
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Menu */}

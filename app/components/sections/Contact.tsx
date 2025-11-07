@@ -74,6 +74,7 @@ const Contact = () => {
       icon: <Phone className="w-6 h-6" />,
       title: "Téléphone",
       details: "+243 995 526 235",
+      details2: "+2438856841858",
       description: "Appelez-nous directement",
     },
     {
@@ -281,6 +282,11 @@ const Contact = () => {
                           <p className="text-primary font-medium mb-1">
                             {info.details}
                           </p>
+                          {(info as any).details2 && (
+                            <p className="text-primary font-medium mb-1">
+                              {(info as any).details2}
+                            </p>
+                          )}
                           <p className="text-sm text-muted-foreground">
                             {info.description}
                           </p>
@@ -291,7 +297,7 @@ const Contact = () => {
                 ))}
               </div>
 
-              {/* Second row: Address and Hours */}
+              {/* Second row: Address and Site web */}
               <div className="grid md:grid-cols-2 gap-4">
                 {contactInfo.slice(2, 4).map((info, index) => (
                   <Card

@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Building2, Globe, Trophy, Handshake } from "lucide-react";
+import Image from "next/image";
 
 const Partners = () => {
   const partners = [
@@ -56,6 +57,7 @@ const Partners = () => {
       since: "2023",
       projects: 10,
       logo: "AS",
+      logoImage: "/partners/Aqua Store.png",
       color: "from-cyan-500/20 to-cyan-600/20"
     },
     {
@@ -107,8 +109,18 @@ const Partners = () => {
             <Card key={index} className="p-6 hover:shadow-xl transition-all duration-500 hover:scale-[1.02] group border-primary/10">
               {/* Partner Header */}
               <div className="flex items-start space-x-4 mb-4">
-                <div className={`w-16 h-16 rounded-none bg-gradient-to-br ${partner.color} flex items-center justify-center flex-shrink-0`}>
-                  <span className="text-xl font-bold text-foreground">{partner.logo}</span>
+                <div className={`w-16 h-16 rounded-none ${(partner as any).logoImage ? 'bg-transparent' : `bg-gradient-to-br ${partner.color}`} flex items-center justify-center flex-shrink-0 overflow-hidden`}>
+                  {(partner as any).logoImage ? (
+                    <Image
+                      src={(partner as any).logoImage}
+                      alt={partner.name}
+                      width={64}
+                      height={64}
+                      className="object-contain w-full h-full"
+                    />
+                  ) : (
+                    <span className="text-xl font-bold text-foreground">{partner.logo}</span>
+                  )}
                 </div>
                 <div className="flex-1 min-w-0">
                   <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors">

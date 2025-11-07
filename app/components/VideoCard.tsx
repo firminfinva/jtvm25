@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Play, Calendar, Eye, ExternalLink } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 interface VideoCardProps {
   id: string;
@@ -33,10 +34,12 @@ export default function VideoCard({
       {/* Video Thumbnail */}
       <div className="relative aspect-video bg-gradient-to-br from-primary/20 via-secondary/20 to-tertiary/20 overflow-hidden">
         {thumbnail ? (
-          <img
+          <Image
             src={thumbnail}
             alt={title}
-            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            fill
+            className="object-cover group-hover:scale-110 transition-transform duration-500"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         ) : (
           <div className="w-full h-full flex items-center justify-center">

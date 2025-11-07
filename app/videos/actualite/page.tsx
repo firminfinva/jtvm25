@@ -5,6 +5,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import VideoCard from "@/components/VideoCard";
 import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
 import { Newspaper, ArrowLeft } from "lucide-react";
 import Link from "next/link";
 

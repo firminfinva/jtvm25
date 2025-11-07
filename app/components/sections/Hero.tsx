@@ -24,7 +24,7 @@ const Hero = ({ onVideoClick }: HeroProps) => {
           loop
           muted
           playsInline
-          className="w-full h-full object-cover opacity-30"
+          className="w-full h-full object-cover"
           style={{
             position: "absolute",
             top: "50%",
@@ -34,6 +34,7 @@ const Hero = ({ onVideoClick }: HeroProps) => {
             transform: "translate(-50%, -50%)",
             minWidth: "100%",
             minHeight: "100%",
+            opacity: 0.62,
           }}
         >
           <source src="/presentation site hd.mp4" type="video/mp4" />
@@ -50,9 +51,9 @@ const Hero = ({ onVideoClick }: HeroProps) => {
             <h1 className="text-5xl md:text-7xl font-bold hero-text animate-in fade-in-0 slide-in-from-bottom-8 duration-1000">
               Bienvenue chez les vidéastes mobiles
             </h1>
-            {/* <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto animate-in fade-in-0 slide-in-from-bottom-8 duration-1000 delay-300">
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto animate-in fade-in-0 slide-in-from-bottom-8 duration-1000 delay-300">
               Bienvenue sur le site bleu
-            </p> */}
+            </p>
             <p className="text-2xl md:text-3xl font-semibold text-primary max-w-3xl mx-auto animate-in fade-in-0 slide-in-from-bottom-8 duration-1000 delay-500">
               « Communiquer sur l'environnement »
             </p>
