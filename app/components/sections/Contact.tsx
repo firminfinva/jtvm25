@@ -67,26 +67,26 @@ const Contact = () => {
     {
       icon: <Mail className="w-6 h-6" />,
       title: "Email",
-      details: "contact@jtvm.com",
+      details: "jtvideomobile@gmail.com",
       description: "Envoyez-nous un email",
     },
     {
       icon: <Phone className="w-6 h-6" />,
       title: "Téléphone",
-      details: "+243 XXX XXX XXX",
+      details: "+243 995 526 235",
       description: "Appelez-nous directement",
     },
     {
       icon: <MapPin className="w-6 h-6" />,
       title: "Adresse",
-      details: "Kinshasa, RDC",
+      details: "Goma, République Démocratique du Congo",
       description: "Notre localisation",
     },
     {
       icon: <Clock className="w-6 h-6" />,
-      title: "Horaires",
-      details: "Lun - Ven: 8h - 18h",
-      description: "Nos heures d'ouverture",
+      title: "Site web",
+      details: "www.jtvm.com",
+      description: "Visitez notre site",
     },
   ];
 
@@ -96,11 +96,12 @@ const Contact = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold hero-text mb-4">
-            Contactez-nous
+            Contact / Partenariats
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Prêt à donner vie à vos idées créatives ? Contactez notre équipe
-            pour discuter de votre projet.
+            Media écolo & mobile / Vidéo Mobile engagées / Tech mobil / Tech verte.
+            <br />
+            <strong className="text-foreground">Communiquer, innover, Agir</strong>
           </p>
         </div>
 
@@ -232,7 +233,7 @@ const Contact = () => {
                   >
                     {isSubmitting ? (
                       <div className="flex items-center space-x-2">
-                        <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                        <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-none animate-spin" />
                         <span>Envoi en cours...</span>
                       </div>
                     ) : (
@@ -270,7 +271,7 @@ const Contact = () => {
                   >
                     <CardContent className="p-4">
                       <div className="flex items-start space-x-3">
-                        <div className="p-2 rounded-lg bg-gradient-to-r from-primary to-secondary text-white">
+                        <div className="p-2 rounded-none bg-gradient-to-r from-primary to-secondary text-white">
                           {info.icon}
                         </div>
                         <div>
@@ -299,7 +300,7 @@ const Contact = () => {
                   >
                     <CardContent className="p-4">
                       <div className="flex items-start space-x-3">
-                        <div className="p-2 rounded-lg bg-gradient-to-r from-primary to-secondary text-white">
+                        <div className="p-2 rounded-none bg-gradient-to-r from-primary to-secondary text-white">
                           {info.icon}
                         </div>
                         <div>

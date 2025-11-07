@@ -6,28 +6,28 @@ import { Play, Eye, Target, TrendingUp, Megaphone, Sparkles } from "lucide-react
 const Advertising = () => {
   const services = [
     {
-      title: "Publicité Vidéo",
-      description: "Création de spots publicitaires impactants pour TV, digital et réseaux sociaux",
+      title: "Produits Forestiers Non Lignés (PFNL)",
+      description: "Promotion des produits issus de la forêt de manière durable et responsable",
       icon: <Play className="w-8 h-8" />,
-      features: ["Scripts créatifs", "Production HD", "Post-production", "Diffusion multi-canal"],
-      color: "from-red-500/10 to-pink-500/10",
-      accent: "text-red-600"
+      features: ["Valorisation des ressources", "Commerce équitable", "Durabilité", "Impact local"],
+      color: "from-green-500/10 to-emerald-500/10",
+      accent: "text-green-600"
     },
     {
-      title: "Campagnes Digitales",
-      description: "Stratégies publicitaires 360° pour maximiser votre visibilité en ligne", 
+      title: "Produits Agricoles, Pêche & Élevage",
+      description: "Mise en avant des produits issus de l'agriculture durable, de la pêche responsable et de l'élevage éthique", 
       icon: <Target className="w-8 h-8" />,
-      features: ["Ciblage précis", "Analytics avancés", "A/B Testing", "ROI optimisé"],
+      features: ["Agriculture durable", "Pêche responsable", "Élevage éthique", "Circuits courts"],
       color: "from-blue-500/10 to-cyan-500/10",
       accent: "text-blue-600"
     },
     {
-      title: "Branding & Identité",
-      description: "Construction et repositionnement de marque avec impact émotionnel fort",
+      title: "Énergie Propre & Biogaz",
+      description: "Promotion des solutions énergétiques renouvelables et durables",
       icon: <Sparkles className="w-8 h-8" />,
-      features: ["Logo & identité", "Charte graphique", "Storytelling", "Positionnement"],
-      color: "from-purple-500/10 to-indigo-500/10", 
-      accent: "text-purple-600"
+      features: ["Énergies renouvelables", "Biogaz", "Efficacité énergétique", "Transition écologique"],
+      color: "from-yellow-500/10 to-orange-500/10", 
+      accent: "text-yellow-600"
     }
   ];
 
@@ -69,10 +69,12 @@ const Advertising = () => {
             </Badge>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold hero-text mb-4">
-            Publicité Créative
+            Publicité Environnementale
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Des campagnes publicitaires qui marquent les esprits et génèrent des résultats mesurables
+            Nous promouvons des produits, services ou initiatives qui contribuent à la préservation de l'environnement.
+            <br />
+            Nous faisons de la publicité pour les produits commerçables écoresponsable.
           </p>
         </div>
 
@@ -80,7 +82,7 @@ const Advertising = () => {
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => (
             <Card key={index} className="p-8 hover:shadow-xl transition-all duration-500 hover:scale-[1.02] group border-primary/10">
-              <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
+              <div className={`w-20 h-20 rounded-none bg-gradient-to-br ${service.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
                 <div className={service.accent}>
                   {service.icon}
                 </div>
@@ -97,7 +99,7 @@ const Advertising = () => {
               <div className="space-y-2">
                 {service.features.map((feature, featureIndex) => (
                   <div key={featureIndex} className="flex items-center text-sm text-muted-foreground">
-                    <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3"></div>
+                    <div className="w-1.5 h-1.5 bg-primary rounded-none mr-3"></div>
                     {feature}
                   </div>
                 ))}
@@ -152,11 +154,11 @@ const Advertising = () => {
         {/* CTA Section */}
         <Card className="p-8 bg-gradient-to-br from-primary/10 via-secondary/10 to-tertiary/10 border-primary/20 text-center">
           <div className="max-w-3xl mx-auto">
-            <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-none flex items-center justify-center mx-auto mb-6">
               <Eye className="w-8 h-8 text-white" />
             </div>
             <h3 className="text-3xl font-bold text-foreground mb-4">
-              Prêt à Marquer les Esprits ?
+              Éduquer le public en lui montrant des alternatives durables
             </h3>
             <p className="text-lg text-muted-foreground mb-8">
               Transformons votre vision en campagne publicitaire mémorable qui génère des résultats exceptionnels.

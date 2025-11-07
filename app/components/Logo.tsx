@@ -30,7 +30,7 @@ const Logo: React.FC<LogoProps> = ({
     <div className={`flex items-center space-x-3 ${className}`}>
       {/* Logo Icon - Using actual logo.png */}
       <div
-        className={`${sizeClasses[size]} relative overflow-hidden rounded-lg shadow-lg group hover:shadow-xl transition-all duration-300`}
+        className={`${sizeClasses[size]} relative overflow-hidden rounded-none shadow-lg group hover:shadow-xl transition-all duration-300`}
       >
         {/* Actual logo image */}
         <Image
@@ -41,9 +41,9 @@ const Logo: React.FC<LogoProps> = ({
           sizes="(max-width: 768px) 32px, (max-width: 1200px) 48px, 64px"
         />
         {/* Subtle overlay for hover effect */}
-        <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent rounded-none opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
         {/* Subtle border */}
-        <div className="absolute inset-0 rounded-lg border border-white/20" />
+        <div className="absolute inset-0 rounded-none border border-white/20" />
       </div>
 
       {/* Logo Text */}
@@ -55,7 +55,7 @@ const Logo: React.FC<LogoProps> = ({
             JTVM
           </span>
           <span className="text-xs text-muted-foreground -mt-1 group-hover:text-primary/80 transition-colors duration-300">
-            Créatif depuis toujours
+            Communiquer sur l'environnement
           </span>
         </div>
       )}

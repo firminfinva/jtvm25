@@ -1,7 +1,11 @@
+"use client";
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import Logo from "@/components/Logo";
+import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 
 interface NavigationProps {
   activeSection: string;
@@ -10,12 +14,26 @@ interface NavigationProps {
 
 const Navigation = ({ activeSection, onSectionChange }: NavigationProps) => {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+  const router = useRouter();
+
+  const handleLogoClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (pathname === "/") {
+      // Si on est déjà sur la page d'accueil, scroller vers le haut
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      onSectionChange("accueil");
+    } else {
+      // Sinon, naviguer vers la page d'accueil
+      router.push("/");
+    }
+  };
 
   const menuItems = [
     { id: "accueil", label: "Accueil" },
-    { id: "video", label: "Vidéo" },
     { id: "apropos", label: "À propos" },
-    { id: "projets", label: "Projets" },
+    { id: "video", label: "Vidéo" },
+    { id: "thematiques", label: "Thématiques" },
     { id: "partenaires", label: "Partenaires" },
     { id: "publicite", label: "Publicité" },
     { id: "contact", label: "Contact" },
@@ -27,7 +45,13 @@ const Navigation = ({ activeSection, onSectionChange }: NavigationProps) => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Logo size="md" />
+            <a 
+              href="/" 
+              onClick={handleLogoClick}
+              className="cursor-pointer"
+            >
+              <Logo size="md" />
+            </a>
           </div>
 
           {/* Desktop Menu */}
@@ -69,7 +93,7 @@ const Navigation = ({ activeSection, onSectionChange }: NavigationProps) => {
         {/* Mobile Menu */}
         {isOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-background/95 backdrop-blur-sm rounded-lg mt-2">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-background/95 backdrop-blur-sm rounded-none mt-2">
               {menuItems.map((item) => (
                 <Button
                   key={item.id}

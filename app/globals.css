@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Century Gothic Font - System font with fallbacks */
+
 /* JTVM Design System - Inspired by modern geometric designs
 All colors MUST be HSL.
 */
@@ -18,17 +20,17 @@ All colors MUST be HSL.
     --popover: 0 0% 100%; /* White popovers */
     --popover-foreground: 0 0% 0%; /* Black text on popovers */
 
-    /* Primary Blue - JTVM Brand Blue (Dominant) */
-    --primary: 210 100% 40%; /* Deep professional blue */
+    /* Primary Blue - JTVM Brand Blue (From Logo: #0056D6 - Right side) */
+    --primary: 214 100% 42%; /* Bright royal blue from logo right (#0056D6) */
     --primary-foreground: 0 0% 100%; /* White text on blue */
-    --primary-glow: 210 100% 50%; /* Lighter blue for glow effects */
-    --primary-light: 210 100% 60%; /* Light blue */
-    --primary-dark: 210 100% 30%; /* Dark blue */
+    --primary-glow: 214 100% 50%; /* Slightly lighter blue for glow effects */
+    --primary-light: 214 100% 55%; /* Light blue */
+    --primary-dark: 214 100% 25%; /* Dark navy blue from logo left (#1A3B70) */
 
-    /* Secondary Blue-Green Gradient */
-    --secondary: 195 85% 45%; /* Blue-green transition */
-    --secondary-foreground: 0 0% 100%; /* White text on blue-green */
-    --secondary-light: 195 85% 55%; /* Light blue-green */
+    /* Secondary Blue - Dark Navy from Logo Left */
+    --secondary: 214 100% 25%; /* Dark navy blue from logo left (#1A3B70) */
+    --secondary-foreground: 0 0% 100%; /* White text on blue */
+    --secondary-light: 214 100% 35%; /* Medium blue */
 
     /* Tertiary Green - Environmental accent */
     --tertiary: 142 76% 40%; /* Professional green */
@@ -50,7 +52,7 @@ All colors MUST be HSL.
     --input: 0 0% 95%; /* Very light gray inputs */
     --ring: 210 100% 35%; /* Blue focus rings */
 
-    --radius: 1rem;
+    --radius: 0;
 
     /* JTVM Brand Gradients - Blue Dominant with Blue-to-Green */
     --gradient-primary: linear-gradient(
@@ -60,16 +62,14 @@ All colors MUST be HSL.
       hsl(var(--primary-glow))
     );
     --gradient-hero: linear-gradient(
-      135deg,
-      hsl(var(--primary)),
-      hsl(var(--secondary)),
-      hsl(var(--tertiary))
+      90deg,
+      #1A3B70 0%,
+      #0056D6 100%
     );
     --gradient-blue-green: linear-gradient(
       90deg,
-      hsl(var(--primary)),
-      hsl(var(--secondary)),
-      hsl(var(--tertiary))
+      #1A3B70 0%,
+      #0056D6 100%
     );
     --gradient-accent: linear-gradient(
       45deg,
@@ -82,10 +82,9 @@ All colors MUST be HSL.
       hsl(var(--muted))
     );
     --gradient-logo: linear-gradient(
-      135deg,
-      #1e40af 0%,
-      #3b82f6 50%,
-      #60a5fa 100%
+      90deg,
+      #1A3B70 0%,
+      #0056D6 100%
     );
 
     /* Shadows with blue tint */
@@ -166,10 +165,18 @@ All colors MUST be HSL.
 @layer base {
   * {
     @apply border-border;
+    font-family: 'Century Gothic', 'CenturyGothic', 'AppleGothic', 'Futura', 'Trebuchet MS', 'Arial', sans-serif;
   }
 
+  html,
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground;
+    font-family: 'Century Gothic', 'CenturyGothic', 'AppleGothic', 'Futura', 'Trebuchet MS', 'Arial', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6,
+  p, span, div, a, button, input, textarea, select, label {
+    font-family: 'Century Gothic', 'CenturyGothic', 'AppleGothic', 'Futura', 'Trebuchet MS', 'Arial', sans-serif;
   }
 
   .geometric-bg {
@@ -201,7 +208,7 @@ All colors MUST be HSL.
       ),
       radial-gradient(
         circle at 60% 60%,
-        hsl(var(--tertiary) / 0.08) 0%,
+        hsl(var(--primary-glow) / 0.08) 0%,
         transparent 50%
       );
     animation: float 20s ease-in-out infinite;
@@ -218,6 +225,32 @@ All colors MUST be HSL.
     66% {
       transform: translate(10px, 20px) rotate(-1deg);
     }
+  }
+
+  @keyframes spin-slow {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  @keyframes spin-slow-reverse {
+    from {
+      transform: rotate(360deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+
+  .animate-spin-slow {
+    animation: spin-slow 20s linear infinite;
+  }
+
+  .animate-spin-slow-reverse {
+    animation: spin-slow-reverse 15s linear infinite;
   }
 
   .hero-text {

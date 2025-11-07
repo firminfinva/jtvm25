@@ -50,7 +50,7 @@ const Projects = () => {
             Nos Projets
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Découvrez nos réalisations les plus marquantes et les projets qui nous rendent fiers
+            Plus de 10 projets en cours
           </p>
         </div>
 
@@ -61,12 +61,12 @@ const Projects = () => {
               <div className={`h-48 ${project.image} relative overflow-hidden`}>
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors duration-300"></div>
                 <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 bg-white/90 text-primary text-sm font-medium rounded-full">
+                  <span className="px-3 py-1 bg-white/90 text-primary text-sm font-medium rounded-none">
                     {project.category}
                   </span>
                 </div>
                 <div className="absolute top-4 right-4">
-                  <span className="px-3 py-1 bg-primary/90 text-white text-sm font-medium rounded-full">
+                  <span className="px-3 py-1 bg-primary/90 text-white text-sm font-medium rounded-none">
                     {project.date}
                   </span>
                 </div>

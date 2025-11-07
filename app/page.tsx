@@ -4,8 +4,8 @@ import { useState, useEffect } from "react";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/sections/Hero";
 import VideoSection from "@/components/sections/VideoSection";
+import Thematics from "@/components/sections/Thematics";
 import About from "@/components/sections/About";
-import Projects from "@/components/sections/Projects";
 import Partners from "@/components/sections/Partners";
 import Advertising from "@/components/sections/Advertising";
 import Contact from "@/components/sections/Contact";
@@ -20,9 +20,9 @@ export default function Home() {
     const handleScroll = () => {
       const sections = [
         "accueil",
-        "video",
         "apropos",
-        "projets",
+        "video",
+        "thematiques",
         "partenaires",
         "publicite",
         "contact",
@@ -79,16 +79,16 @@ export default function Home() {
           <Hero onVideoClick={handleVideoClick} />
         </div>
 
-        <div id="video-section" className="pt-16">
-          <VideoSection />
-        </div>
-
         <div id="apropos-section" className="pt-16">
           <About />
         </div>
 
-        <div id="projets-section" className="pt-16">
-          <Projects />
+        <div id="video-section" className="pt-16">
+          <VideoSection />
+        </div>
+
+        <div id="thematiques-section" className="pt-16">
+          <Thematics />
         </div>
 
         <div id="partenaires-section" className="pt-16">
