@@ -74,7 +74,7 @@ const Contact = () => {
       icon: <Phone className="w-6 h-6" />,
       title: "Téléphone",
       details: "+243 995 526 235",
-      details2: "+2438856841858",
+      details2: "+243856841858",
       description: "Appelez-nous directement",
     },
     {
