@@ -101,9 +101,9 @@ export default function Home() {
           <Partners />
         </div>
 
-        <div id="publicite-section" className="pt-16">
+        {/* <div id="publicite-section" className="pt-16">
           <Advertising />
-        </div>
+        </div> */}
 
         <div id="contact-section" className="pt-16">
           <Contact />

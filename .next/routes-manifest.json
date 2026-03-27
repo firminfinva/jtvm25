@@ -18,7 +18,17 @@
     "afterFiles": [],
     "fallback": []
   },
-  "dynamicRoutes": [],
+  "dynamicRoutes": [
+    {
+      "page": "/videos/[category]/[id]",
+      "regex": "^/videos/([^/]+?)/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPcategory": "nxtPcategory",
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/videos/(?<nxtPcategory>[^/]+?)/(?<nxtPid>[^/]+?)(?:/)?$"
+    }
+  ],
   "staticRoutes": [
     {
       "page": "/",
@@ -31,6 +41,42 @@
       "regex": "^/_not\\-found(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/videos",
+      "regex": "^/videos(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/videos(?:/)?$"
+    },
+    {
+      "page": "/videos/actualite",
+      "regex": "^/videos/actualite(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/videos/actualite(?:/)?$"
+    },
+    {
+      "page": "/videos/divertissement",
+      "regex": "^/videos/divertissement(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/videos/divertissement(?:/)?$"
+    },
+    {
+      "page": "/videos/documentaires",
+      "regex": "^/videos/documentaires(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/videos/documentaires(?:/)?$"
+    },
+    {
+      "page": "/videos/interviews",
+      "regex": "^/videos/interviews(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/videos/interviews(?:/)?$"
+    },
+    {
+      "page": "/videos/publicite",
+      "regex": "^/videos/publicite(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/videos/publicite(?:/)?$"
     }
   ],
   "dataRoutes": [],

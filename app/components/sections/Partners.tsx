@@ -72,10 +72,10 @@ const Partners = () => {
   ];
 
   const stats = [
-    { icon: <Building2 className="w-6 h-6" />, value: "50+", label: "Partenaires Actifs" },
-    { icon: <Globe className="w-6 h-6" />, value: "15", label: "Pays" },
-    { icon: <Trophy className="w-6 h-6" />, value: "100+", label: "Projets Collaboratifs" },
-    { icon: <Handshake className="w-6 h-6" />, value: "5 ans", label: "Expérience Réseau" }
+    { icon: <Building2 className="w-6 h-6" />, value: "7+", label: "Partenaires Actifs" },
+    { icon: <Globe className="w-6 h-6" />, value: "1", label: "Pays" },
+    { icon: <Trophy className="w-6 h-6" />, value: "7+", label: "Projets Collaboratifs" },
+    { icon: <Handshake className="w-6 h-6" />, value: "4 ans", label: "Expérience Réseau" }
   ];
 
   return (

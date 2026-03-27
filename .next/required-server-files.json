@@ -50,7 +50,10 @@
       "path": "/_next/image",
       "loader": "default",
       "loaderFile": "",
-      "domains": [],
+      "domains": [
+        "images.unsplash.com",
+        "eoimages.gsfc.nasa.gov"
+      ],
       "disableStaticImages": false,
       "minimumCacheTTL": 60,
       "formats": [
@@ -60,7 +63,16 @@
       "dangerouslyAllowSVG": false,
       "contentSecurityPolicy": "script-src 'none'; frame-src 'none'; sandbox;",
       "contentDispositionType": "attachment",
-      "remotePatterns": [],
+      "remotePatterns": [
+        {
+          "protocol": "https",
+          "hostname": "images.unsplash.com"
+        },
+        {
+          "protocol": "https",
+          "hostname": "eoimages.gsfc.nasa.gov"
+        }
+      ],
       "unoptimized": false
     },
     "devIndicators": {
@@ -91,6 +103,7 @@
     "compiler": {},
     "expireTime": 31536000,
     "staticPageGenerationTimeout": 60,
+    "output": "standalone",
     "modularizeImports": {
       "@mui/icons-material": {
         "transform": "@mui/icons-material/{{member}}"
@@ -99,7 +112,7 @@
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "D:\\jtvm\\jtvm",
+    "outputFileTracingRoot": "D:\\jtvm\\jtvm25",
     "experimental": {
       "useSkewCookie": false,
       "cacheLife": {
@@ -288,10 +301,10 @@
     "bundlePagesRouterDependencies": false,
     "configFileName": "next.config.js",
     "turbopack": {
-      "root": "D:\\jtvm\\jtvm"
+      "root": "D:\\jtvm\\jtvm25"
     }
   },
-  "appDir": "D:\\jtvm\\jtvm",
+  "appDir": "D:\\jtvm\\jtvm25",
   "relativeAppDir": "",
   "files": [
     ".next\\routes-manifest.json",

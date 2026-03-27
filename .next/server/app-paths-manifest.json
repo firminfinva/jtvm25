@@ -1,4 +1,11 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
-  "/page": "app/page.js"
+  "/page": "app/page.js",
+  "/videos/[category]/[id]/page": "app/videos/[category]/[id]/page.js",
+  "/videos/actualite/page": "app/videos/actualite/page.js",
+  "/videos/publicite/page": "app/videos/publicite/page.js",
+  "/videos/page": "app/videos/page.js",
+  "/videos/divertissement/page": "app/videos/divertissement/page.js",
+  "/videos/interviews/page": "app/videos/interviews/page.js",
+  "/videos/documentaires/page": "app/videos/documentaires/page.js"
 }
