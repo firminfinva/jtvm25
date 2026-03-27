@@ -1,9 +1,7 @@
-# Fix Next.js Hydration Mismatch
+# TODO: Make app run on port 3005
 
 ## Steps:
-- [x] Step 1: Edit app/layout.tsx to add suppressHydrationWarning={true} to body tag
-- [x] Step 2: Verify no other hydration issues
-- [x] Step 3: Test the fix (restart dev server)
-- [x] Step 4: Complete task
-
-**All steps completed. Next.js hydration mismatch fixed by adding suppressHydrationWarning to body tag in app/layout.tsx. Restart dev server with `bun dev` or `npm run dev` to verify the error is resolved.
+- [x] Create TODO.md with plan breakdown
+- [x] Edit package.json scripts for port 3005
+- [x] Test by running `npm run dev`
+- [x] attempt_completion
